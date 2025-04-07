@@ -1,12 +1,28 @@
 # Path of Exile 2 Trade Bot
 
-An automated trading bot for Path of Exile 2 that finds and executes profitable currency arbitrage opportunities using live market data from the official trade site.
+🚧 **UNDER CONSTRUCTION - WAITING FOR OFFICIAL API** 🚧
+
+This project is currently on hold, waiting for Grinding Gear Games to release official APIs for Path of Exile 2 trading. Once the official APIs become available, development will resume.
+
+An automated trading bot for Path of Exile 2 that finds and executes profitable currency arbitrage opportunities using market data from official APIs.
 
 **IMPORTANT DISCLAIMER: This product isn't affiliated with or endorsed by Grinding Gear Games in any way.**
 
-## Features
+## Current Status
 
-- Live market data fetching from official trade site
+⚠️ **Not Currently Functional** ⚠️
+
+The bot is waiting for:
+
+- Official Path of Exile 2 Trading APIs
+- Public API documentation from Grinding Gear Games
+- Official trading endpoints and authentication methods
+
+Development will resume once these requirements are met.
+
+## Planned Features
+
+- Live market data fetching from official APIs
 - Automated detection of profitable trading opportunities
 - Currency arbitrage detection using Bellman-Ford algorithm
 - Real-time price monitoring
@@ -18,17 +34,27 @@ An automated trading bot for Path of Exile 2 that finds and executes profitable 
 ## Prerequisites
 
 - Python 3.8 or higher
-- Chrome browser (for Selenium WebDriver)
-- ChromeDriver (will be automatically managed)
+- Required packages listed in requirements.txt
 
 ## Installation
 
-1. Clone this repository or download the files
+1. Clone this repository
 2. Install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
+
+## Future Implementation
+
+The bot is designed to use official APIs for:
+
+- Market data retrieval
+- Trade execution
+- Price monitoring
+- User authentication
+
+These features will be implemented once the official APIs are available.
 
 ## Configuration
 
