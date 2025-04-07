@@ -1,15 +1,16 @@
 """
-Path of Exile 2 Trade Bot
-------------------------
+Path of Exile 2 Currency Arbitrage Tool
+-------------------------------------
 
 IMPORTANT DISCLAIMER: This product isn't affiliated with or endorsed by Grinding Gear Games in any way.
 
-This bot is designed for educational purposes only. Users are responsible for ensuring their use
-of this software complies with Path of Exile's Terms of Service and trading guidelines.
+This tool is designed for educational purposes only, focusing on currency arbitrage opportunities
+in Path of Exile 2's economy. Users are responsible for ensuring their use of this software 
+complies with Path of Exile's Terms of Service and trading guidelines.
 
 Path of Exile and Path of Exile 2 are registered trademarks of Grinding Gear Games.
 
-NOTE: This bot is currently non-functional as it awaits the release of official Path of Exile 2 Trading APIs.
+NOTE: This tool is currently non-functional as it awaits the release of official Path of Exile 2 Trading APIs.
 """
 
 import pandas as pd
@@ -27,28 +28,28 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('tradebot.log'),
+        logging.FileHandler('arbitrage.log'),
         logging.StreamHandler()
     ]
 )
 
-class POE2TradeBot:
+class POE2CurrencyArbitrage:
     def __init__(self):
         self.prices = {}
         self.conversion_rates = {}
-        self.last_trade_time = 0
-        self.trade_cooldown = 5  # seconds between trades
+        self.last_analysis_time = 0
+        self.analysis_cooldown = 5  # seconds between market analyses
         self.min_profit_margin = 0.1  # 10% minimum profit margin
-        self.temp_data_file = 'temp_market_data.json'
+        self.temp_data_file = 'market_data.json'
         
         # API endpoints to be filled when official APIs are available
         self.api_endpoints = {
             'market_data': '',  # Future endpoint for market data
-            'trade': '',       # Future endpoint for trade execution
+            'currency_rates': '',  # Future endpoint for currency exchange rates
             'auth': ''         # Future endpoint for authentication
         }
         
-    async def fetch_market_data(self, mode='buy'):
+    async def fetch_market_data(self, currency_type='all'):
         """Fetch current market data from POE2 API (Not yet implemented)"""
         logging.warning("Market data fetching is not available - Waiting for official API")
         return {}
@@ -147,14 +148,14 @@ class POE2TradeBot:
 
         return opportunities
 
-    async def execute_trade(self, item_from, item_to):
-        """Execute a trade between two items (Not yet implemented)"""
-        logging.warning("Trade execution not available - Waiting for official API")
+    async def analyze_opportunity(self, currency_from, currency_to):
+        """Analyze a potential arbitrage opportunity (Not yet implemented)"""
+        logging.warning("Arbitrage analysis not available - Waiting for official API")
         return False
 
-    async def monitor_trade_opportunities(self):
-        """Monitor trade opportunities"""
-        logging.warning("Bot is currently non-functional - Waiting for official API")
+    async def monitor_opportunities(self):
+        """Monitor currency arbitrage opportunities"""
+        logging.warning("Tool is currently non-functional - Waiting for official API")
         logging.info("Press ESC to exit")
         
         try:
@@ -166,9 +167,9 @@ class POE2TradeBot:
                 time.sleep(1)
                 
         except KeyboardInterrupt:
-            logging.info("Bot stopped by user")
+            logging.info("Tool stopped by user")
         except Exception as e:
-            logging.error(f"Error in trade monitoring: {str(e)}")
+            logging.error(f"Error in opportunity monitoring: {str(e)}")
         finally:
             self.cleanup()
 
@@ -183,13 +184,13 @@ class POE2TradeBot:
 
 def main():
     try:
-        logging.warning("Bot is currently non-functional - Waiting for official Path of Exile 2 Trading APIs")
-        bot = POE2TradeBot()
-        logging.info("Trade bot initialized in standby mode")
+        logging.warning("Tool is currently non-functional - Waiting for official Path of Exile 2 Trading APIs")
+        arbitrage_tool = POE2CurrencyArbitrage()
+        logging.info("Currency arbitrage tool initialized in standby mode")
         import asyncio
-        asyncio.run(bot.monitor_trade_opportunities())
+        asyncio.run(arbitrage_tool.monitor_opportunities())
     except Exception as e:
-        logging.error(f"Bot crashed: {str(e)}")
+        logging.error(f"Tool crashed: {str(e)}")
 
 if __name__ == "__main__":
     main()

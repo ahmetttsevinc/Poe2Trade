@@ -1,10 +1,10 @@
-# Path of Exile 2 Trade Bot
+# Path of Exile 2 Currency Arbitrage Tool
 
 🚧 **UNDER CONSTRUCTION - WAITING FOR OFFICIAL API** 🚧
 
 This project is currently on hold, waiting for Grinding Gear Games to release official APIs for Path of Exile 2 trading. Once the official APIs become available, development will resume.
 
-An automated trading bot for Path of Exile 2 that finds and executes profitable currency arbitrage opportunities using market data from official APIs.
+A currency arbitrage analysis tool for Path of Exile 2 that identifies profitable currency exchange opportunities using market data from official APIs.
 
 **IMPORTANT DISCLAIMER: This product isn't affiliated with or endorsed by Grinding Gear Games in any way.**
 
@@ -12,7 +12,7 @@ An automated trading bot for Path of Exile 2 that finds and executes profitable 
 
 ⚠️ **Not Currently Functional** ⚠️
 
-The bot is waiting for:
+The tool is waiting for:
 
 - Official Path of Exile 2 Trading APIs
 - Public API documentation from Grinding Gear Games
@@ -22,13 +22,13 @@ Development will resume once these requirements are met.
 
 ## Planned Features
 
-- Live market data fetching from official APIs
-- Automated detection of profitable trading opportunities
-- Currency arbitrage detection using Bellman-Ford algorithm
-- Real-time price monitoring
-- Configurable profit margins
+- Live market data analysis from official APIs
+- Automated detection of currency arbitrage opportunities
+- Advanced arbitrage detection using Bellman-Ford algorithm
+- Real-time exchange rate monitoring
+- Configurable profit margin thresholds
 - Comprehensive logging system
-- Safe trade execution with cooldown periods
+- Multiple currency pair analysis
 - Easy exit mechanism
 
 ## Prerequisites
@@ -47,10 +47,10 @@ pip install -r requirements.txt
 
 ## Future Implementation
 
-The bot is designed to use official APIs for:
+The tool is designed to use official APIs for:
 
 - Market data retrieval
-- Trade execution
+- Currency exchange rate analysis
 - Price monitoring
 - User authentication
 
@@ -58,50 +58,50 @@ These features will be implemented once the official APIs are available.
 
 ## Configuration
 
-The bot comes with default settings that can be modified in `cursortradebot.py`:
+The tool comes with default settings that can be modified in `poe2_currency_arbitrage.py`:
 
-- `trade_cooldown`: Time between trades (default: 5 seconds)
-- `min_profit_margin`: Minimum profit required for trade execution (default: 10%)
+- `analysis_cooldown`: Time between market analyses (default: 5 seconds)
+- `min_profit_margin`: Minimum profit required for opportunity detection (default: 10%)
 - Logging configuration can be adjusted in the logging setup section
 
 ## Usage
 
-1. Run the bot:
+1. Run the tool:
 
 ```bash
-python cursortradebot.py
+python poe2_currency_arbitrage.py
 ```
 
-2. The bot will:
+2. The tool will:
 
-   - Connect to the official trade site and fetch live market data
-   - Monitor buy and sell prices for all currencies
-   - Calculate profitable arbitrage opportunities
-   - Execute trades when profitable opportunities are found
-   - Log all activities to `tradebot.log`
+   - Connect to the official APIs and fetch market data
+   - Monitor currency exchange rates
+   - Calculate potential arbitrage opportunities
+   - Log all findings and analyses
+   - Display profitable opportunities when found
 
-3. Press `ESC` at any time to safely stop the bot
+3. Press `ESC` at any time to safely stop the tool
 
 ## Data Management
 
-- The bot fetches live market data from the official trade site
+- The tool fetches market data from official APIs
 - Data is temporarily cached to prevent excessive requests
 - Cache is automatically refreshed every 5 minutes
-- Backup data is stored in `temp_market_data.json`
+- Market data is stored in `market_data.json`
 
 ## Logging
 
-All bot activities are logged to `tradebot.log`, including:
+All tool activities are logged to `arbitrage.log`, including:
 
 - Market data updates
-- Found trading opportunities
-- Trade execution attempts and results
+- Found arbitrage opportunities
+- Analysis results
 - Errors and warnings
 
 ## Safety Features
 
-- Cooldown period between trades to prevent spam
-- Error handling for failed trades
+- Rate limiting for API requests
+- Error handling for failed requests
 - Safe exit mechanism
 - Comprehensive logging for monitoring
 - Automatic data backup
