@@ -34,6 +34,7 @@ ENV/
 # Project specific
 tradebot.log
 temp_market_data.json
+projectrelatedfiles/
 
 # Logs and databases
 *.log
